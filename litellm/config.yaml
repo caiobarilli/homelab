@@ -1,0 +1,47 @@
+model_list:
+  - model_name: ollama-mistral
+    litellm_params:
+      model: ollama/mistral:7b-instruct-q4_0
+      api_base: http://192.168.15.111:11434
+
+  - model_name: ollama-llama
+    litellm_params:
+      model: ollama/llama3.2:3b
+      api_base: http://192.168.15.111:11434
+
+  - model_name: ollama-coder
+    litellm_params:
+      model: ollama/qwen2.5-coder:3b
+      api_base: http://192.168.15.111:11434
+
+  - model_name: ollama-gemma
+    litellm_params:
+      model: ollama/gemma2:2b
+      api_base: http://192.168.15.111:11434
+
+  - model_name: ollama-dolphin
+    litellm_params:
+      model: ollama/dolphin-phi:latest
+      api_base: http://192.168.15.111:11434
+
+  - model_name: claude-opus-max
+    litellm_params:
+      model: anthropic/claude-opus-4-7
+      api_key: os.environ/ANTHROPIC_API_KEY_MAX
+
+  - model_name: claude-sonnet-max
+    litellm_params:
+      model: anthropic/claude-sonnet-4-6
+      api_key: os.environ/ANTHROPIC_API_KEY_MAX
+
+  - model_name: claude-haiku-max
+    litellm_params:
+      model: anthropic/claude-haiku-4-5-20251001
+      api_key: os.environ/ANTHROPIC_API_KEY_MAX
+
+litellm_settings:
+  cache: true
+  cache_params:
+    type: redis
+    host: homelab-redis-1
+    port: 6379

@@ -1,0 +1,21 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'windows_desktop'
+    static_configs:
+      - targets: ['192.168.15.111:9182']
+        labels:
+          host: 'desktop'
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['192.168.15.173:9090']
+        labels:
+          host: 'main-vm'
+
+  - job_name: 'nvidia_gpu'
+    static_configs:
+      - targets: ['192.168.15.111:9835']
+        labels:
+          host: 'desktop'

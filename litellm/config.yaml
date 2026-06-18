@@ -1,4 +1,5 @@
 model_list:
+  # Ollama
   - model_name: ollama-mistral
     litellm_params:
       model: ollama/mistral:7b-instruct-q4_0
@@ -24,20 +25,37 @@ model_list:
       model: ollama/dolphin-phi:latest
       api_base: http://192.168.15.111:11434
 
+  # Opus
   - model_name: claude-opus-max
+    litellm_params:
+      model: anthropic/claude-opus-4-8
+      api_key: os.environ/ANTHROPIC_API_KEY_MAX
+
+  - model_name: claude-opus-4-7-max
     litellm_params:
       model: anthropic/claude-opus-4-7
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
 
+  - model_name: claude-opus-4-6-max
+    litellm_params:
+      model: anthropic/claude-opus-4-6
+      api_key: os.environ/ANTHROPIC_API_KEY_MAX
+
+  # Sonnet
   - model_name: claude-sonnet-max
     litellm_params:
       model: anthropic/claude-sonnet-4-6
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
 
+  # Haiku
   - model_name: claude-haiku-max
     litellm_params:
       model: anthropic/claude-haiku-4-5-20251001
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
+
+
+
+
 
 litellm_settings:
   cache: true

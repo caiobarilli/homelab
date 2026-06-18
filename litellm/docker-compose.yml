@@ -14,8 +14,9 @@ services:
     command: --config /app/config.yaml --port 4000
     depends_on:
       - postgres
+    networks:
+      - homelab_default
     restart: unless-stopped
-
   postgres:
     image: postgres:16-alpine
     environment:

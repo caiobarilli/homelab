@@ -26,36 +26,32 @@ model_list:
       api_base: http://192.168.15.111:11434
 
   # Opus
-  - model_name: claude-opus-max
+  - model_name: claude-opus-4-8
     litellm_params:
       model: anthropic/claude-opus-4-8
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
 
-  - model_name: claude-opus-4-7-max
+  - model_name: claude-opus-4-7
     litellm_params:
       model: anthropic/claude-opus-4-7
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
 
-  - model_name: claude-opus-4-6-max
+  - model_name: claude-opus-4-6
     litellm_params:
       model: anthropic/claude-opus-4-6
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
 
   # Sonnet
-  - model_name: claude-sonnet-max
+  - model_name: claude-sonnet-4-6
     litellm_params:
       model: anthropic/claude-sonnet-4-6
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
 
   # Haiku
-  - model_name: claude-haiku-max
+  - model_name: claude-haiku-4-5-20251001
     litellm_params:
       model: anthropic/claude-haiku-4-5-20251001
       api_key: os.environ/ANTHROPIC_API_KEY_MAX
-
-
-
-
 
 litellm_settings:
   cache: true
